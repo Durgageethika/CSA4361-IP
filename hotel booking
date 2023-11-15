@@ -1,0 +1,29 @@
+<!-- index.php -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Hotel Room Booking</title>
+</head>
+<body>
+    <h1>Hotel Room Booking</h1>
+
+    <h2>Available Rooms</h2>
+    <?php include('display_available_rooms.php'); ?>
+
+    <h2>Book a Room</h2>
+    <form action="book_room.php" method="post">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" name="name" required><br>
+
+        <label for="room_number">Room Number:</label>
+        <input type="number" id="room_number" name="room_number" required><br>
+
+        <button type="submit">Book Room</button>
+    </form>
+
+    <h2>Booked Rooms</h2>
+    <?php include('display_booked_rooms.php'); ?>
+</body>
+</html>
